@@ -1,6 +1,7 @@
-FROM registry.access.redhat.com/ubi8/ubi 
+FROM registry.access.redhat.com/ubi8/ubi:latest
 
-RUN dnf --nogpgcheck --disableplugin=subscription-manager -y install make sudo gcc kernel-devel
+RUN dnf -y install kernel-devel
+RUN dnf --nogpgcheck --disableplugin=subscription-manager -y install make sudo gcc
 && dnf clean all \
 && rm -rf /var/cache/dnf
 
