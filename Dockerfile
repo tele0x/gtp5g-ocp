@@ -5,7 +5,7 @@ RUN dnf -y install make sudo gcc \
 && rm -rf /var/cache/dnf
 
 WORKDIR /usr/src
-COPY ./gtp5g/ /usr/src/gtp5g
+COPY . /usr/src/gtp5g
 
 WORKDIR /usr/src/gtp5g
 RUN make && make install
