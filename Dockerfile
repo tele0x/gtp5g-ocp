@@ -1,6 +1,6 @@
-FROM registry.redhat.io/openshift4/driver-toolkit-rhel8:v4.8
+FROM registry.access.redhat.com/ubi8/ubi 
 
-RUN dnf -y install make sudo gcc \
+RUN dnf --nogpgcheck --disableplugin=subscription-manager -y install make sudo gcc "kernel-devel-uname-r == $(uname -r)"
 && dnf clean all \
 && rm -rf /var/cache/dnf
 
