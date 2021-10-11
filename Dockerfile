@@ -1,9 +1,5 @@
 FROM registry.redhat.io/openshift4/driver-toolkit-rhel8:v4.8
 
-RUN dnf --nogpgcheck --disableplugin=subscription-manager -y install sudo gcc
-&& dnf clean all \
-&& rm -rf /var/cache/dnf
-
 WORKDIR /usr/src
 COPY . /usr/src/gtp5g
 
