@@ -21,7 +21,7 @@ Push to a local or remote registry
 podman push locahost:gtp5g:v4.8 quay.io/ferossi/gtp5g-mod-ocp
 ```
 
-### Load
+## Load
 
 Edit gtp5g-driver.yaml and point to the your container image, apply manifest to the cluster
 
@@ -29,3 +29,6 @@ Edit gtp5g-driver.yaml and point to the your container image, apply manifest to 
 oc create ns gtp5g-driver
 oc create -f gtp5g-driver.yaml -n gtp5g
 ```
+
+
+## Verify
